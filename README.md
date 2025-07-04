@@ -5,6 +5,7 @@ Group Scholar Queue Pulse is a lightweight ARM64 assembly CLI that logs support-
 ## Features
 - Log queue signals with source, priority, and note
 - Summarize signal volume by priority
+- Review recent signals with optional limit
 - Production-ready Postgres schema + seed data
 
 ## Tech
@@ -40,6 +41,17 @@ export DATABASE_URL="postgres://USER:PASSWORD@HOST:PORT/DBNAME"
 ### 5) View summary
 ```bash
 ./gs-queue-pulse summary
+```
+
+### 6) View recent signals
+```bash
+./gs-queue-pulse recent
+./gs-queue-pulse recent 10
+```
+
+## Testing
+```bash
+./scripts/test_cli.sh
 ```
 
 ## Notes
